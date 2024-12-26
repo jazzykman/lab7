@@ -1,17 +1,16 @@
 body {
-    background-color: rgb(106, 186, 106);
+  background-color: rgb(106, 139, 186);
 }
-  
+
 a {
-    text-decoration: none;
-    color: black;
-    font-size:20px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
 
 #place {
-    width: 200px;
-    height: 300px;
-    background-color: #006400; 
-    margin: 20px auto;
+  width: 200px;
+  height: 300px;
+  background-color: #003e4c;
+  margin: 20px auto;
 }
-  
