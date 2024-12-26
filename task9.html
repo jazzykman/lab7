@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>task9</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="text">
+            <h1>Завдання №9</h1>
+        </div>
+        <div class="widget">
+            <p>Background color: <span class="color">-</span></p>
+            <button type="button" class="change-color">Change color</button>
+        </div>
+        <br>
+        <br>
+        <button>
+            <a href="index.html">Головна сторінка</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task10.html">Наступне завдання</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task8.html">Попереднє завдання</a>
+        </button>
+        </div>
+    </body>
+    <script>
+        function getRandomHexColor() {
+            return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
+        }
+      
+        const button = document.querySelector('.change-color');
+        const colorSpan = document.querySelector('.color');
+      
+        button.addEventListener('click', () => {
+            const newColor = getRandomHexColor();  
+            document.body.style.backgroundColor = newColor;
+            colorSpan.textContent = newColor;
+        });
+    </script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>task10</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="text">
+            <h1>Завдання №10</h1>
+        </div>
+        <div id="controls">
+            <input type="number" min="1" max="100" step="1">
+            <button type="button" data-create>Create</button>
+            <button type="button" data-destroy>Destroy</button>
+        </div>
+        <div id="boxes"></div>
+        <br>
+        <br>
+        <button>
+            <a href="index.html">Головна сторінка</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task9.html">Попереднє завдання</a>
+        </button>
+        </div>
+    </body>
+    <script>
+        function getRandomHexColor() {
+            return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
+        }
+      
+        function createBoxes(amount) {
+            const boxesContainer = document.getElementById('boxes');
+            boxesContainer.innerHTML = '';  
+        
+            let size = 30;  
+        
+            for (let i = 0; i < amount; i++) {
+                const div = document.createElement('div');
+                div.style.width = `${size}px`;
+                div.style.height = `${size}px`;
+                div.style.backgroundColor = getRandomHexColor();
+                div.style.margin = '5px';
+        
+                boxesContainer.appendChild(div);
+        
+                size += 10;  
+            }
+        }
+      
+        function destroyBoxes() {
+            const boxesContainer = document.getElementById('boxes');
+            boxesContainer.innerHTML = '';
+        }
+      
+        document.querySelector('[data-create]').addEventListener('click', () => {
+            const inputValue = document.querySelector('input[type="number"]').value;
+            const amount = Number(inputValue);
+        
+            if (amount >= 1 && amount <= 100) {
+                    createBoxes(amount);
+                    document.querySelector('input[type="number"]').value = '';
+            } else {
+                alert('Please enter a number between 1 and 100');
+            }
+        });
+      
+        document.querySelector('[data-destroy]').addEventListener('click', destroyBoxes);
+    </script>
+</html>

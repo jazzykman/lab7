@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>task3</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="text">
+            <h1>Завдання №3</h1>
+        </div>
+        <form>
+            <input type="text" id="inputField" placeholder="Введіть текст">
+            <button id="toggleButton" type="button">Приховати</button>
+        </form>
+        <br>
+        <br>
+        <button>
+            <a href="index.html">Головна сторінка</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task5.html">Наступне завдання</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task1.html">Попереднє завдання</a>
+        </button>
+        </div>
+    </body>
+    <script>
+        const inputField = document.getElementById('inputField');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', function (event) {
+            if (inputField.type === 'text') {
+                inputField.type = 'password'; 
+                toggleButton.textContent = 'Розкрити';
+            } else {
+                inputField.type = 'text'; 
+                toggleButton.textContent = 'Приховати';
+            }
+        });
+    </script>
+</html>

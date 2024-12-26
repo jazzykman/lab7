@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>task8</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="text">
+            <h1>Завдання №8</h1>
+        </div>
+        <form class="login-form">
+            <label>
+                Email
+                <input type="email" name="email">
+            </label>
+            <label>
+                Password
+                <input type="password" name="password">
+            </label>
+            <button type="submit">Log in</button>
+        </form>
+        <br>
+        <br>
+        <button>
+            <a href="index.html">Головна сторінка</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task9.html">Наступне завдання</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task7.html">Попереднє завдання</a>
+        </button>
+        </div>
+    </body>
+    <script>
+        const form = document.querySelector('.login-form');
+      
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+      
+            const formData = {};
+            const elements = form.elements;
+      
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i].name && elements[i].value.trim() === '') {
+                    alert('All form fields must be filled in');
+                    return;
+                }
+            }
+        
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i].name) {
+                    formData[elements[i].name] = elements[i].value.trim();
+                }
+            }
+
+            console.log('Form Data:', formData);
+            form.reset();
+        });
+    </script>
+</html>

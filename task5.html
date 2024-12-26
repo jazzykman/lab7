@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>task5</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="text">
+            <h1>Завдання №5</h1>
+        </div>
+        <div id="place"></div>
+        <br>
+        <br>
+        <button>
+            <a href="index.html">Головна сторінка</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task7.html">Наступне завдання</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task3.html">Попереднє завдання</a>
+        </button>
+        </div>
+    </body>
+    <script>
+        window.addEventListener('click', function (event) {
+            const placeDiv = document.getElementById('place');
+            
+            if (event.target === placeDiv) {
+                console.log(true);
+            } else {
+                console.log(false);
+            }
+        });
+    </script>
+</html>

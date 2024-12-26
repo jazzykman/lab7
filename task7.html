@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>task7</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <div class="text">
+            <h1>Завдання №7</h1>
+        </div>
+        <ul id="categories">
+            <li class="item">
+              <h2>Animals</h2>
+              <ul>
+                <li>Cat</li>
+                <li>Hamster</li>
+                <li>Horse</li>
+                <li>Parrot</li>
+              </ul>
+            </li>
+            <li class="item">
+              <h2>Products</h2>
+              <ul>
+                <li>Bread</li>
+                <li>Prasley</li>
+                <li>Cheese</li>
+              </ul>
+            </li>
+            <li class="item">
+              <h2>Technologies</h2>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+              </ul>
+            </li>
+        </ul>          
+        <br>
+        <br>
+        <button>
+            <a href="index.html">Головна сторінка</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task8.html">Наступне завдання</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="task5.html">Попереднє завдання</a>
+        </button>
+        </div>
+    </body>
+    <script>
+        const categories = document.querySelectorAll('#categories .item');
+
+        console.log('Number of categories:', categories.length);
+
+        categories.forEach(category => {
+        const title = category.querySelector('h2').textContent;
+        const itemsCount = category.querySelectorAll('ul li').length;
+        console.log('Category:', title);
+        console.log('Elements:', itemsCount);
+        });
+    </script>
+</html>
